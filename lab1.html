@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторне заняття №1 — Основи HTML</title>
+</head>
+<body>
+  <!-- Посилання на список лабораторних -->
+  <a href="https://classroom.google.com/u/2/w/NzgwMjk0NzgwNjA1/t/all">Список лабораторних</a>
+
+  <h1>Реєстрація користувача</h1>
+
+  <form action="https://webhook.site/0c98b062-d8a9-4e4f-9ca9-f0917ce69560" method="post">
+    <label for="fname">Ім'я:</label>
+    <input type="text" id="fname" name="first_name" required>
+    <br>
+
+    <label for="lname">Прізвище:</label>
+    <input type="text" id="lname" name="last_name" required>
+    <br>
+
+    <label for="email">Електронна пошта:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label for="pwd">Пароль:</label>
+    <input type="password" id="pwd" name="password" required>
+    <br>
+
+    <label for="conf_pwd">Підтвердження паролю:</label>
+    <input type="password" id="conf_pwd" name="confirm_password" required>
+    <br>
+
+    <label for="dob">Дата народження:</label>
+    <input type="date" id="dob" name="birthdate">
+    <br>
+
+    <label for="gender">Стать:</label>
+    <select id="gender" name="gender">
+      <option value="">Оберіть стать</option>
+      <option value="male">Чоловіча</option>
+      <option value="female">Жіноча</option>
+      <option value="other">Інше</option>
+    </select>
+    <br>
+
+    <input type="submit" value="Зареєструватися">
+  </form>
+</body>
+</html>
