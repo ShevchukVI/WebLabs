@@ -1,0 +1,33 @@
+.my-form {
+  background-color: lightblue;
+  color: darkblue;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px gray;
+  margin: 50px auto;
+}
+
+.my-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.my-form input[type="text"],
+.my-form input[type="email"],
+.my-form input[type="password"],
+.my-form input[type="date"],
+.my-form select {
+  width: 300px;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.submit-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}

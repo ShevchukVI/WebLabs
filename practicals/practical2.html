@@ -2,12 +2,13 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <title>Лабораторна робота 1 - Основи HTML</title>
+  <title>Практична робота 2</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/practical2.css" />
 </head>
 <body>
   <header>
-    <h1>Лабораторна робота №1 - Форма реєстрації</h1>
+    <h1>Практична робота №2 - CSS</h1>
     <nav>
       <ul>
         <li><a href="../index.html">Головна</a></li>
@@ -18,27 +19,36 @@
     </nav>
   </header>
   <main>
-    <form action="https://webhook.site/0c98b062-d8a9-4e4f-9ca9-f0917ce69560" method="post">
-      <label for="fname">Ім'я:</label>
+    <form action="https://webhook.site/0c98b062-d8a9-4e4f-9ca9-f0917ce69560" method="post" class="my-form">
+      <h2>Форма з CSS стилями</h2>
+      
+      <label for="fname">Ім'я:</label><br>
       <input type="text" id="fname" name="first_name" required><br>
-      <label for="lname">Прізвище:</label>
+      
+      <label for="lname">Прізвище:</label><br>
       <input type="text" id="lname" name="last_name" required><br>
-      <label for="email">Електронна пошта:</label>
+      
+      <label for="email">Електронна пошта:</label><br>
       <input type="email" id="email" name="email" required><br>
-      <label for="pwd">Пароль:</label>
+      
+      <label for="pwd">Пароль:</label><br>
       <input type="password" id="pwd" name="password" required><br>
-      <label for="conf_pwd">Підтвердження паролю:</label>
+      
+      <label for="conf_pwd">Підтвердження паролю:</label><br>
       <input type="password" id="conf_pwd" name="confirm_password" required><br>
-      <label for="dob">Дата народження:</label>
+      
+      <label for="dob">Дата народження:</label><br>
       <input type="date" id="dob" name="birthdate"><br>
-      <label for="gender">Стать:</label>
+      
+      <label for="gender">Стать:</label><br>
       <select id="gender" name="gender">
         <option value="">Оберіть стать</option>
         <option value="male">Чоловіча</option>
         <option value="female">Жіноча</option>
         <option value="other">Інше</option>
-      </select><br>
-      <input type="submit" value="Зареєструватися">
+      </select><br><br>
+      
+      <input type="submit" value="Зареєструватися" class="submit-button">
     </form>
   </main>
   <footer>
