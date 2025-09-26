@@ -1,0 +1,71 @@
+.top-bar {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.logo {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.search {
+  flex: 1;
+  padding: 10px;
+  margin: 0 20px;
+  border: 1px solid gray;
+}
+
+.user {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid blue;
+  color: blue;
+}
+
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.sidebar div {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.video {
+  width: 300px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.thumbnail {
+  height: 150px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
