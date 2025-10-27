@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Лабораторна робота 4 - Тижневий планер</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/lab4.css" />
+</head>
+<body>
+  <header>
+    <h1>Лабораторна робота №4 - Тижневий планер</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="../about.html">Про мене</a></li>
+        <li><a href="../practicals.html">Практичні роботи</a></li>
+        <li><a href="../labs.html">Лабораторні заняття</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="planner-container">
+      <div class="planner">
+        <!-- Header -->
+        <div class="header-cell">
+          <div class="header-left">WEEKLY PLAN</div>
+          <div class="header-right">
+            <div class="header-item">
+              <span class="label">WEEK OF</span>
+              <input type="text">
+            </div>
+            <div class="header-item">
+              <span class="label">HEALTHY HABIT</span>
+              <input type="text">
+            </div>
+            <div class="header-checkboxes">
+              <div class="check-right">
+                <span>ROOM FOR IMPROVEMENT</span>
+                <input type="checkbox" id="room">
+              </div>
+              <div class="check-right">
+                <span>ROCKED IT</span>
+                <input type="checkbox" id="rocked">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="cell sidebar">
+          <div class="sidebar-section">
+            <h3>TOP 3 GOALS</h3>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+          </div>
+          <div class="sidebar-section">
+            <h3>EVERYTHING ELSE</h3>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+          </div>
+          <div class="sidebar-section">
+            <h3>NEXT WEEK</h3>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+            <div class="check-line"><input type="checkbox"><input type="text"></div>
+          </div>
+        </div>
+        <!-- Days -->
+        <div class="cell day monday"><div class="day-title">MONDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell day tuesday"><div class="day-title">TUESDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell day wednesday"><div class="day-title">WEDNESDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell day thursday"><div class="day-title">THURSDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell day friday"><div class="day-title">FRIDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell empty empty-thursday"></div>
+        <div class="cell empty empty-friday"></div>
+        <div class="cell day saturday"><div class="day-title">SATURDAY <input type="checkbox"></div><textarea></textarea></div>
+        <div class="cell day sunday"><div class="day-title">SUNDAY <input type="checkbox"></div><textarea></textarea></div>
+      </div>
+      <div class="planner-footer"></div>
+    </div>
+  </main>
+  <footer>
+    <p>Контакти: vadim2005shevchuk@gmail.com | GitHub: <a href="https://github.com/ShevchukVI">ShevchukVI</a></p>
+  </footer>
+</body>
+</html>

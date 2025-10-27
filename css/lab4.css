@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #fafafa; }
+main { padding: 20px; }
+.planner-container { max-width: 1100px; margin: 0 auto; background: white; border: 1px solid #ccc; }
+.planner {
+  display: grid;
+  grid-template-columns: 220px repeat(3, 1fr);
+  grid-template-rows: 90px 210px 210px 105px 105px;
+  border: 1px solid #999;
+}
+.header-cell { grid-column: 1 / -1; grid-row: 1; background: #f5f5f5; border-bottom: 1px solid #999; display: flex; align-items: center; padding: 15px 20px; gap: 30px; }
+.header-left { font-size: 38px; letter-spacing: 4px; white-space: nowrap; }
+.header-right { flex: 1; display: flex; align-items: center; gap: 25px; }
+.header-item { display: flex; flex-direction: column; }
+.header-item .label { font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-bottom: 6px; }
+.header-item input[type="text"] { border: none; border-bottom: 1px solid #ccc; padding: 5px 0; font-size: 13px; outline: none; background: transparent; }
+.header-checkboxes { display: flex; flex-direction: column; gap: 8px; margin-left: auto; }
+.check-right { display: flex; align-items: center; gap: 8px; }
+.check-right span { font-size: 10px; font-weight: bold; letter-spacing: 1px; }
+.check-right input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+
+.cell { border-right: 1px solid #999; border-bottom: 1px solid #999; padding: 15px; background: white; }
+.sidebar { grid-column: 1 / 2; grid-row: 2 / 6; display: flex; flex-direction: column; gap: 13px; padding: 12px 7px; }
+.sidebar-section h3 { font-size: 11px; font-weight: bold; letter-spacing: 1px; margin: 0 0 8px 0; }
+.day { display: flex; flex-direction: column; }
+
+.monday    { grid-column: 2; grid-row: 2; }
+.tuesday   { grid-column: 3; grid-row: 2; }
+.wednesday { grid-column: 4; grid-row: 2; }
+.thursday  { grid-column: 2; grid-row: 3; border-right: 1px solid #999; }
+.friday    { grid-column: 3; grid-row: 3; border-left: none; border-right: 1px solid #999; }
+.empty-thursday { grid-column: 2; grid-row: 4; border: none; }
+.empty-friday   { grid-column: 3; grid-row: 4; border: none; }
+.saturday  { grid-column: 4; grid-row: 3; border-left: none; border-right: none; }
+.sunday    { grid-column: 4; grid-row: 4; border-left: none; border-right: none; border-bottom: none; }
+
+.day-title { font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+input[type="text"] { width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 5px 0; font-size: 13px; outline: none; }
+.check-line { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.check-line input[type="checkbox"] { width: 15px; height: 15px; flex-shrink: 0; cursor: pointer; }
+.check-line input[type="text"] { flex: 1; min-width: 0; border-bottom: 1px solid #ddd; font-size: 12px; }
+input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+textarea { flex: 1; border: none; resize: none; outline: none; font-family: Arial, sans-serif; font-size: 13px; padding: 5px 0; }
+.empty { background: white; }
+.planner-footer { height: 20px; background: #a8a8a8; border: 1px solid #999; border-top: none; }
