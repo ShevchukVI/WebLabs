@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #ffffff;
+    --primary-color: #1e3a8a;
+    --accent-gradient-start: #b48811;
+    --accent-gradient-end: #ffe176;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.new-year-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a2f4b 0%, var(--bg-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.new-year-card__snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(4px 4px at 100px 50px, #fff, transparent), 
+        radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+        radial-gradient(3px 3px at 300px 250px, #fff, transparent), 
+        radial-gradient(4px 4px at 400px 350px, #fff, transparent), 
+        radial-gradient(6px 6px at 500px 100px, #fff, transparent), 
+        radial-gradient(3px 3px at 50px 200px, #fff, transparent), 
+        radial-gradient(4px 4px at 150px 300px, #fff, transparent), 
+        radial-gradient(6px 6px at 250px 400px, #fff, transparent), 
+        radial-gradient(3px 3px at 350px 500px, #fff, transparent);
+    background-size: 550px 550px;
+    animation: snow 10s linear infinite;
+    opacity: 0.3;
+}
+
+.new-year-card__container {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+}
+
+.new-year-card__header {
+    background: linear-gradient(90deg, var(--accent-gradient-start) 0%, var(--accent-gradient-end) 50%, var(--accent-gradient-start) 100%);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 4px solid #8e6802;
+}
+
+.new-year-card__title {
+    margin: 0;
+    color: #1a2f4b;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.new-year-card__content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.new-year-card__image-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e2e8f0;
+}
+
+.new-year-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.new-year-card__text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.new-year-card__text--signature {
+    margin-top: 10px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #1a2f4b;
+}
+
+.new-year-card__footer {
+    background-color: #f1f5f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #cbd5e1;
+}
+
+.new-year-card__btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.new-year-card__btn:hover {
+    background-color: #2c476e;
+}
+
+@keyframes snow {
+    0% { background-position: 0 0; }
+    100% { background-position: 550px 550px; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (max-width: 600px) {
+    .new-year-card__content {
+        padding: 15px;
+    }
+}
