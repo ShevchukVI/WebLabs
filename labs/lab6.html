@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 6 - Game</title>
+    <link rel="stylesheet" href="../css/lab6.css">
+</head>
+<body>
+    <header>
+        <h1>LAB #6: POKEMON RUN</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../practicals.html">PRACTICALS</a></li>
+                <li><a href="../labs.html">LABS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="scene-container">
+            <div class="score-board">SCORE: <span id="scoreVal">0</span></div>
+
+            <div class="start-screen" id="startScreen">
+                <h2 id="mainTitle" style="color: #FFD700; text-shadow: 4px 4px 0 #000; margin-bottom: 30px;">POKEMON RUN</h2>
+                <button class="start-btn" onclick="startGame()">START</button>
+                <p style="margin-top: 20px; color: #fff; font-size: 12px;">SPACE / CLICK to Jump</p>
+            </div>
+
+            <div class="celestial-body"></div>
+            <div class="clouds"></div>
+            
+            <div class="pokemon" id="pikachu"></div>
+            <div class="obstacle stone" id="obstacle"></div>
+            <div class="ground" id="ground"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>PRESS START TO CONTINUE | 2025</p>
+    </footer>
+
+    <script>
+        const pikachu = document.getElementById('pikachu');
+        const obstacle = document.getElementById('obstacle');
+        const ground = document.getElementById('ground');
+        const startScreen = document.getElementById('startScreen');
+        const scoreSpan = document.getElementById('scoreVal');
+        const mainTitle = document.getElementById('mainTitle');
+        
+        let isGameRunning = false;
+        let score = 0;
+        let gameLoop;
+        let checkCollision;
+        let currentSpeed = 3;
+
+        function jump() {
+            if (!isGameRunning) return;
+            if (!pikachu.classList.contains('jump')) {
+                pikachu.classList.add('jump');
+                setTimeout(() => {
+                    pikachu.classList.remove('jump');
+                }, 800);
+            }
+        }
+
+        obstacle.addEventListener('animationiteration', () => {
+            if (!isGameRunning) return;
+
+            const randomType = Math.random();
+            if (randomType > 0.5) {
+                obstacle.className = 'obstacle bird obstacle-running';
+            } else {
+                obstacle.className = 'obstacle stone obstacle-running';
+            }
+
+            if (score > 0 && score % 100 === 0 && currentSpeed > 1.2) {
+                currentSpeed -= 0.2;
+                obstacle.style.animationDuration = currentSpeed + 's';
+            }
+        });
+
+        function startGame() {
+            if (isGameRunning) return;
+            
+            isGameRunning = true;
+            score = 0;
+            currentSpeed = 3;
+            scoreSpan.innerText = score;
+            
+            startScreen.classList.add('hidden');
+            
+            obstacle.className = 'obstacle stone obstacle-running';
+            obstacle.style.animationDuration = currentSpeed + 's';
+            
+            ground.style.animationPlayState = 'running';
+
+            gameLoop = setInterval(() => {
+                score++;
+                scoreSpan.innerText = score;
+            }, 100);
+
+            checkCollision = setInterval(() => {
+                let pikaRect = pikachu.getBoundingClientRect();
+                let obstRect = obstacle.getBoundingClientRect();
+
+                let pikaHit = {
+                    l: pikaRect.left + 25,
+                    r: pikaRect.right - 25,
+                    t: pikaRect.top + 20,
+                    b: pikaRect.bottom - 10
+                };
+
+                let obstHit = {
+                    l: obstRect.left + 10,
+                    r: obstRect.right - 10,
+                    t: obstRect.top + 10,
+                    b: obstRect.bottom - 10
+                };
+
+                if (
+                    pikaHit.l < obstHit.r &&
+                    pikaHit.r > obstHit.l &&
+                    pikaHit.t < obstHit.b &&
+                    pikaHit.b > obstHit.t
+                ) {
+                    gameOver();
+                }
+
+            }, 20);
+        }
+
+        function gameOver() {
+            isGameRunning = false;
+            clearInterval(gameLoop);
+            clearInterval(checkCollision);
+            
+            obstacle.classList.remove('obstacle-running');
+            ground.style.animationPlayState = 'paused';
+            
+            mainTitle.innerText = "GAME OVER";
+            startScreen.classList.remove('hidden');
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space') {
+                event.preventDefault();
+                if (!isGameRunning && !startScreen.classList.contains('hidden')) {
+                    startGame();
+                } else {
+                    jump();
+                }
+            }
+        });
+
+        document.querySelector('.scene-container').addEventListener('click', () => {
+            if (!isGameRunning && !startScreen.classList.contains('hidden')) {
+                startGame();
+            } else {
+                jump();
+            }
+        });
+    </script>
+</body>
+</html>
