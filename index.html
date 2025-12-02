@@ -2,49 +2,127 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <title>Особистий веб-сайт Шевчук Вадим Ігорович</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Портфоліо - Шевчук Вадим</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
   <header>
-    <h1>Особистий веб-сайт Шевчук Вадим Ігорович</h1>
     <nav>
       <ul>
         <li><a href="index.html">Головна</a></li>
         <li><a href="about.html">Про мене</a></li>
-        <li><a href="practicals.html">Практичні роботи</a></li>
-        <li><a href="labs.html">Лабораторні заняття</a></li>
+        <li><a href="practicals.html">Практичні</a></li>
+        <li><a href="labs.html">Лабораторні</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section id="about-preview">
-      <h2>Коротко про мене</h2>
-      <p>Студент 4 курсу ДУІКТ</p>
-      <p>Ім'я: Шевчук Вадим Ігорович</p>
-    </section>
-    <section id="practicals-preview">
-      <h2>Практичні роботи</h2>
-      <ul>
-        <li><a href="practicals/practical1.html">Практична робота 1 - Розклад HTML</a></li>
-        <li><a href="practicals/practical2.html">Практична робота 2 - Стилі CSS</a></li>
-		<li><a href="practicals/practical3.html">Практична робота 3 - YouTube FlexBox</a></li>
-		<li><a href="practicals/practical4.html">Практична робота 4 - Клавіатура Grid</a></li>
-      </ul>
-    </section>
-    <section id="labs-preview">
-      <h2>Лабораторні роботи</h2>
-      <ul>
-        <li><a href="labs/lab1.html">Лабораторна робота 1 - Форма HTML</a></li>
-        <li><a href="labs/lab2.html">Лабораторна робота 2 - CSS селектори</a></li>
-		<li><a href="labs/lab4.html">Лабораторна робота 4 - Тижневий планер</a></li>
-      </ul>
-    </section>
-  </main>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Привіт, я Вадим,<br>System Administrator</h1>
+      <p>Студент 4 курсу ДУІКТ. Працюю системним адміністратором, цікавлюсь веб-розробкою та мережевими технологіями. Це моє портфоліо з виконаними роботами.</p>
+      <a href="files/resume.pdf" class="btn-resume">Завантажити резюме</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/photo.jpg" alt="Шевчук Вадим">
+    </div>
+  </section>
+
+  <section class="section-colored">
+    <div class="section-header">
+      <span class="section-title">Практичні роботи</span>
+      <a href="practicals.html" class="view-all">Дивитись всі</a>
+    </div>
+    <div class="grid-cards">
+      <article class="card">
+        <h3><a href="practicals/practical4.html">Клавіатура Grid</a></h3>
+        <div class="card-meta">
+          <span>12 Feb 2025</span>
+          <span class="divider"></span>
+          <span>CSS Grid</span>
+        </div>
+        <p>Практична робота №4. Створення макету клавіатури з використанням технології CSS Grid Layout.</p>
+      </article>
+
+      <article class="card">
+        <h3><a href="practicals/practical3.html">Копія YouTube</a></h3>
+        <div class="card-meta">
+          <span>05 Feb 2025</span>
+          <span class="divider"></span>
+          <span>Flexbox</span>
+        </div>
+        <p>Практична робота №3. Відтворення інтерфейсу YouTube за допомогою Flexbox. Адаптивна верстка.</p>
+      </article>
+      
+      <article class="card">
+        <h3><a href="practicals/practical2.html">Стилізація форми</a></h3>
+        <div class="card-meta">
+          <span>28 Jan 2025</span>
+          <span class="divider"></span>
+          <span>CSS Basic</span>
+        </div>
+        <p>Практична робота №2. Робота з базовими стилями CSS, оформлення елементів форми.</p>
+      </article>
+
+      <article class="card">
+        <h3><a href="practicals/practical1.html">HTML Розклад</a></h3>
+        <div class="card-meta">
+          <span>20 Jan 2025</span>
+          <span class="divider"></span>
+          <span>HTML Tables</span>
+        </div>
+        <p>Практична робота №1. Створення розкладу занять з використанням HTML таблиць та об'єднання комірок.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-list">
+    <span class="section-title">Лабораторні роботи</span>
+    
+    <div class="work-item">
+      <div class="work-image" style="background-color: #FF9800;">PLANNER</div>
+      <div class="work-content">
+        <h3><a href="labs/lab4.html">Лабораторна робота №4</a></h3>
+        <div class="work-meta">
+          <span class="badge">2025</span>
+          <span class="category">HTML/CSS</span>
+        </div>
+        <p>Тижневий планер. Верстка складного макету, використання позиціонування та псевдоелементів для створення чекбоксів.</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-image" style="background-color: #009688;">SELECTORS</div>
+      <div class="work-content">
+        <h3><a href="labs/lab2.html">Лабораторна робота №2</a></h3>
+        <div class="work-meta">
+          <span class="badge">2025</span>
+          <span class="category">CSS</span>
+        </div>
+        <p>Вивчення CSS селекторів. Робота з id, class, атрибутами та комбінаторами для точного вибору елементів.</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-image" style="background-color: #3F51B5;">FORMS</div>
+      <div class="work-content">
+        <h3><a href="labs/lab1.html">Лабораторна робота №1</a></h3>
+        <div class="work-meta">
+          <span class="badge">2025</span>
+          <span class="category">HTML</span>
+        </div>
+        <p>Створення форми реєстрації. Використання різних типів input, валідація даних та відправка форми.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>Контакти: <a href="mailto:vadim2005shevchuk@gmail.com">vadim2005shevchuk@gmail.com</a> | GitHub: <a href="https://github.com/ShevchukVI">ShevchukVI</a></p>
-    <p>&copy; 2025</p>
+    <div class="socials">
+      <a href="https://github.com/ShevchukVI" title="GitHub"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" alt="GH"></a>
+      <a href="mailto:vadim2005shevchuk@gmail.com" title="Email"><img src="https://cdn-icons-png.flaticon.com/512/542/542638.png" width="30" alt="Email"></a>
+    </div>
+    <p>Copyright ©2025 All rights reserved</p>
   </footer>
 </body>
 </html>
